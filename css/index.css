@@ -2,11 +2,13 @@
     /*set global colours */
     --theme: #03037d;
     --mainText: rgba(255, 255, 255, 0.925);
+    --highlight: #03034f;
 }
 /*set background colour and navbar colour*/
 body {
     margin: 0 auto;
     background-color: var(--theme);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .bg-dark {
     background-color: var(--theme) !important;
@@ -31,11 +33,6 @@ h1, p, a{
     background-size: cover;
 }
 
-.text-layout{
-    align-items: end;
-    justify-content: end;
-}
-
 /*add image to jumbo tron and centre content inside of it*/
 .heroBackground {
     height: calc(75vh);
@@ -56,12 +53,19 @@ h1, p, a{
     text-align: center;
   }
 
+  /*use boostrap default variables to modify accordion to fit theme*/
   .accordion {
     --bs-accordion-bg: var(--theme);
-    --bs-accordion-active-bg: #03034f; 
+    --bs-accordion-active-bg: var(--highlight); 
     --bs-accordion-color: var(--mainText);
     --bs-accordion-border-color: var(--mainText);
     --bs-accordion-btn-color: var(--mainText);
     --bs-accordion-active-color: var(--mainText);
+  }
+
+  footer {
+    padding: 20px;
+    background-color: var(--highlight);
+    text-align: center;
   }
   
