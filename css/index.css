@@ -1,0 +1,67 @@
+:root {
+    /*set global colours */
+    --theme: #03037d;
+    --mainText: rgba(255, 255, 255, 0.925);
+}
+/*set background colour and navbar colour*/
+body {
+    margin: 0 auto;
+    background-color: var(--theme);
+}
+.bg-dark {
+    background-color: var(--theme) !important;
+}
+
+/*remove links on a small screen*/
+@media only screen and (max-width: 600px) {
+    .custom-nav{
+        display: none !important;
+    }
+
+}
+
+/*set text colour*/
+h1, p, a{
+    color: var(--mainText) !important;
+}
+
+.card{
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+}
+
+.text-layout{
+    align-items: end;
+    justify-content: end;
+}
+
+/*add image to jumbo tron and centre content inside of it*/
+.heroBackground {
+    height: calc(75vh);
+    background-image: url(../images/hero-bg.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* setting features of text in jumbotron*/
+.jumboCopy {
+    width: 70%;
+    min-width: 500px;
+    max-width: 700px;
+    color: white;
+    text-align: center;
+  }
+
+  .accordion {
+    --bs-accordion-bg: var(--theme);
+    --bs-accordion-active-bg: #03034f; 
+    --bs-accordion-color: var(--mainText);
+    --bs-accordion-border-color: var(--mainText);
+    --bs-accordion-btn-color: var(--mainText);
+    --bs-accordion-active-color: var(--mainText);
+  }
+  
