@@ -10,8 +10,16 @@ body {
     background-color: var(--theme);
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
 .bg-dark {
     background-color: var(--theme) !important;
+}
+
+nav a:hover{
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 2px;
+    background-color: var(--highlight);
 }
 
 /*remove links on a small screen*/
@@ -23,14 +31,21 @@ body {
 }
 
 /*set text colour*/
-h1, p, a{
+h1, p, a, h2, h3, h4, .main{
     color: var(--mainText) !important;
 }
 
-.card{
-    width: 250px;
-    height: 250px;
-    background-size: cover;
+h3, .heading {
+   
+    text-decoration: underline;
+    color: var(--mainText);
+    text-underline-offset: 2px;
+}
+
+h3 {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 /*add image to jumbo tron and centre content inside of it*/
@@ -53,6 +68,12 @@ h1, p, a{
     text-align: center;
   }
 
+  .heading {
+    width: 100%;
+    text-align: center;
+    padding-right: 20px;
+    position: block;
+  }
   /*use boostrap default variables to modify accordion to fit theme*/
   .accordion {
     --bs-accordion-bg: var(--theme);
@@ -63,6 +84,23 @@ h1, p, a{
     --bs-accordion-active-color: var(--mainText);
   }
 
+  .about-me {
+    text-align: center;
+  }
+
+
+  .contact-section {
+    background-color: var(--theme) !important;
+    height: 200px;
+    margin-bottom: 100px !important;
+    margin-left: 10px;
+  }
+
+.contact-card {
+    background-color: var(--highlight) !important;
+  }
+
+  /*spaced the footer and colored it to differentiate and center the text*/
   footer {
     padding: 20px;
     background-color: var(--highlight);
