@@ -1,109 +1,207 @@
 :root {
-    /*set global colours */
-    --theme: #03037d;
-    --mainText: rgba(255, 255, 255, 0.925);
-    --highlight: #03034f;
+  /*set global colours */
+  --theme: #03037d;
+  --mainText: rgba(255, 255, 255, 0.925);
+  --highlight: #03034f;
 }
 /*set background colour and navbar colour*/
 body {
-    margin: 0 auto;
-    background-color: var(--theme);
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 0 auto;
+  background-color: var(--theme);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 .bg-dark {
-    background-color: var(--theme) !important;
+  background-color: var(--theme) !important;
+}
+/*change how navbar links work when hovered*/
+nav a:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 2px;
+  background-color: var(--highlight);
+  filter: brightness(125%);
 }
 
-nav a:hover{
-    text-decoration: underline;
-    text-underline-offset: 5px;
-    text-decoration-thickness: 2px;
-    background-color: var(--highlight);
-}
-
-/*remove links on a small screen*/
+/*remove links and footer on a small screen*/
 @media only screen and (max-width: 600px) {
-    .custom-nav{
-        display: none !important;
-    }
+  .custom-nav {
+    display: none !important;
+  }
+  /*align the two out of line boxes*/
+  .gg,
+  .space-invaders {
+    margin-left: 25% !important;
+  }
 
+  footer {
+    display: none;
+  }
 }
 
 /*set text colour*/
-h1, p, a, h2, h3, h4, .main{
-    color: var(--mainText) !important;
+h1,
+p,
+a,
+h2,
+h3,
+h4,
+.main,
+h5 {
+  color: var(--mainText) !important;
 }
 
-h3, .heading {
-   
-    text-decoration: underline;
-    color: var(--mainText);
-    text-underline-offset: 2px;
+h3,
+.heading {
+  text-decoration: underline;
+  color: var(--mainText);
+  text-underline-offset: 2px;
 }
 
+.heading,
 h3 {
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 /*add image to jumbo tron and centre content inside of it*/
 .heroBackground {
-    height: calc(75vh);
-    background-image: url(../images/hero-bg.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: calc(75vh);
+  background-image: url(../images/hero-bg.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* setting features of text in jumbotron*/
 .jumboCopy {
-    width: 70%;
-    min-width: 500px;
-    max-width: 700px;
-    color: white;
-    text-align: center;
-  }
+  width: 70%;
+  min-width: 500px;
+  max-width: 700px;
+  color: var(--mainText);
+  text-align: center;
+}
 
-  .heading {
-    width: 100%;
-    text-align: center;
-    padding-right: 20px;
-    position: block;
-  }
-  /*use boostrap default variables to modify accordion to fit theme*/
-  .accordion {
-    --bs-accordion-bg: var(--theme);
-    --bs-accordion-active-bg: var(--highlight); 
-    --bs-accordion-color: var(--mainText);
-    --bs-accordion-border-color: var(--mainText);
-    --bs-accordion-btn-color: var(--mainText);
-    --bs-accordion-active-color: var(--mainText);
-  }
+.heading {
+  width: 100%;
+  text-align: center;
+  padding-right: 20px;
+  position: block;
+}
 
-  .about-me {
-    text-align: center;
-  }
+/*set height and width of main card as well as brightness*/
+.mso {
+  background-image: url(../images/mso.png);
+  height: 300px;
+  background-size: cover;
+  filter: brightness(50%);
+  width: 50%;
+  margin-left: 25%;
+  margin-bottom: 25px;
+}
 
+/*increase the brightness of image on hover*/
+.mso:hover,
+.gg:hover,
+.tig:hover,
+.space-invaders:hover,
+.aspf:hover {
+  filter: brightness(80%);
+}
 
-  .contact-section {
-    background-color: var(--theme) !important;
-    height: 200px;
-    margin-bottom: 100px !important;
-    margin-left: 10px;
-  }
+/*set main size of other grids*/
+.gg,
+.tig,
+.space-invaders,
+.aspf {
+  height: 300px;
+  width: 500px;
+  filter: brightness(25%);
+  width: 50%;
+  margin-left: 25%;
+  margin-bottom: 25px;
+}
 
+/*add images to the cards*/
+.gg {
+  background-image: url(../images/guessing-game.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.tig {
+  background-image: url(../images/twitch-game.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.space-invaders {
+  background-image: url(../images/space-invaders.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.aspf {
+  background-image: url(../images/pathfinding.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+/*aligning the cards with margins*/
+.gg,
+.space-invaders {
+  margin-left: 20%;
+}
+
+.tig,
+.aspf {
+  margin-right: 20%;
+}
+
+/*set shadow for box inside of project and postion*/
+.pText {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  justify-content: end;
+  background-color: #03034f66;
+}
+
+/*use boostrap default variables to modify accordion to fit theme*/
+.accordion {
+  --bs-accordion-bg: var(--theme);
+  --bs-accordion-active-bg: var(--highlight);
+  --bs-accordion-color: var(--mainText);
+  --bs-accordion-border-color: var(--mainText);
+  --bs-accordion-btn-color: var(--mainText);
+  --bs-accordion-active-color: var(--mainText);
+  padding-top: 75px !important;
+}
+
+.about-me {
+  text-align: center;
+}
+
+/*set the hieght and color for contact me section*/
+.contact-section {
+  background-color: var(--theme) !important;
+  height: 200px;
+  margin-bottom: 100px !important;
+  margin-left: 8px;
+}
+
+/*set card colors for contact us section*/
 .contact-card {
-    background-color: var(--highlight) !important;
-  }
+  background-color: var(--highlight) !important;
+}
 
-  /*spaced the footer and colored it to differentiate and center the text*/
-  footer {
-    padding: 20px;
-    background-color: var(--highlight);
-    text-align: center;
-  }
-  
+/*spaced the footer and colored it to differentiate and center the text*/
+footer {
+  padding: 20px;
+  width: 100%;
+  background-color: var(--highlight);
+  text-align: center;
+}
